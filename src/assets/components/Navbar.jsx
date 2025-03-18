@@ -5,7 +5,7 @@ export default function Navbar() {
     <nav className="navbar navbar-expand-lg bg-body-tertiary">
       <div className="container-fluid">
         <Link to={"/"} className="navbar-brand">
-          <i class="fa-solid fa-key me-2"></i> Key4Games
+          <i className="fa-solid fa-key me-2"></i> Key4Games
         </Link>
         <button
           className="navbar-toggler"

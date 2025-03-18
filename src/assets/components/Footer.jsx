@@ -5,7 +5,7 @@ export default function Footer() {
         <div className="row border-bottom pb-4">
           {/* Logo */}
           <div className="col-md-3 mb-3 fs-1">
-            <i class="fa-solid fa-key me-2"></i> Key4Games
+            <i className="fa-solid fa-key me-2"></i> Key4Games
           </div>
 
           {/* Support */}
