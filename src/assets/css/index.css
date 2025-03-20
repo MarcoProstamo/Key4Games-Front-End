@@ -1,1 +1,40 @@
 @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css");
+
+.bg-darker{
+    background-color: #101010;
+}
+
+body{
+    background-color: #272727;
+}
+
+.wrapper{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.wrapper > main {
+    flex-grow: 1;
+}
+
+.game-image{
+    height: 15rem;
+    width: 25rem;
+    object-fit: cover;
+    border-radius: .7rem;
+    margin-bottom: .5rem;
+}
+
+.game-title{
+    font-size: 1.8rem;
+    color: white;
+}
+
+.cursor-pointer{
+    cursor: pointer;
+}
+
+.cursor-pointer.cursor-hover:hover{
+    transform: scale(1.05);
+}

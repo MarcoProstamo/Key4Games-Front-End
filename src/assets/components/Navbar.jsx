@@ -2,9 +2,9 @@ import { Link } from "react-router-dom";
 
 export default function Navbar() {
   return (
-    <nav className="navbar navbar-expand-lg bg-body-tertiary">
+    <nav className="navbar navbar-expand-lg bg-darker">
       <div className="container-fluid">
-        <Link to={"/"} className="navbar-brand">
+        <Link to={"/"} className="navbar-brand text-light">
           <i className="fa-solid fa-key me-2"></i> Key4Games
         </Link>
         <button
@@ -20,13 +20,13 @@ export default function Navbar() {
         </button>
         <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
           <div className="navbar-nav">
-            <Link to={"/"} className="nav-link">
+            <Link to={"/"} className="text-light nav-link">
               Home
             </Link>
-            <Link to={"/about-us"} className="nav-link">
+            <Link to={"/about-us"} className="text-light nav-link">
               About Us
             </Link>
-            <Link to={"/work-us"} className="nav-link">
+            <Link to={"/work-us"} className="text-light nav-link">
               Work with Us
             </Link>
           </div>

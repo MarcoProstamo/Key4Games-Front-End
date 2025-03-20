@@ -1,8 +1,8 @@
 export default function Footer() {
   return (
-    <footer className="bg-dark text-light py-5">
+    <footer className="bg-darker text-light py-5">
       <div className="container">
-        <div className="row border-bottom pb-4">
+        <div className="row pb-4">
           {/* Logo */}
           <div className="col-md-3 mb-3 fs-1">
             <i className="fa-solid fa-key me-2"></i> Key4Games
