@@ -6,6 +6,7 @@ export default function HomePage() {
 
   return (
     <>
+      <div className="jumbo"></div>
       <section id="CardContainer" className="container my-5">
         <div className="d-flex align-items-center gap-3 mb-4 cursor-pointer">
           <h2 className="text-light fw-semibold">Hottest </h2>
@@ -13,7 +14,9 @@ export default function HomePage() {
         </div>
         <div className="row row-cols-3 g-5">
           {games &&
-            games.map((game) => <Game title={game.title} key={game.id} />)}
+            games.map((game, i) => {
+              if (i < 9) return <Game title={game.title} key={game.id} />;
+            })}
         </div>
       </section>
     </>

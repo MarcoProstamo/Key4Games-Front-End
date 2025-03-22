@@ -38,3 +38,45 @@ body{
 .cursor-pointer.cursor-hover:hover{
     transform: scale(1.05);
 }
+
+.jumbo {
+    background: url(https://placehold.co/100x100) no-repeat center center/cover;
+    width: 100%;
+    height: 500px; /* Regola l'altezza a piacere */
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 90%);
+}
+
+.navbar {
+    position: fixed;
+    z-index: 1;
+    width: 100%;
+    padding: 1rem;
+}
+
+.center-nav {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.outline-nav {
+    background-color: rgb(184, 180, 187);
+    border-radius: 1rem;
+    padding-left:  1rem;
+    padding-right:  1rem;
+}
+
+.navbar.scrolled {
+    background-color: rgba(255, 255, 255, 0.85) !important;
+    transition: background-color 0.3s ease-in-out;
+}
+  
+.navbar.scrolled .navbar-brand,
+.navbar.scrolled .nav-link {
+    color: black !important;
+}
+
+.navbar.scrolled .fa-cart-shopping,
+.navbar.scrolled .fa-circle-user {
+    color: black !important;
+}

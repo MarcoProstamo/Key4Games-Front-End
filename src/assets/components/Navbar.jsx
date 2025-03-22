@@ -1,10 +1,25 @@
 import { Link } from "react-router-dom";
+import { useEffect } from "react";
 
 export default function Navbar() {
+  useEffect(() => {
+    const handleScroll = () => {
+      const navbar = document.getElementById("navbar");
+      if (window.scrollY > 50) {
+        navbar.classList.add("scrolled");
+      } else {
+        navbar.classList.remove("scrolled");
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
-    <nav className="navbar navbar-expand-lg bg-darker">
+    <nav id="navbar" className="navbar navbar-expand-lg bg-transparent">
       <div className="container-fluid">
-        <Link to={"/"} className="navbar-brand text-light">
+        <Link to={"/"} className="navbar-brand text-dark fs-2">
           <i className="fa-solid fa-key me-2"></i> Key4Games
         </Link>
         <button
@@ -18,17 +33,27 @@ export default function Navbar() {
         >
           <span className="navbar-toggler-icon"></span>
         </button>
-        <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
-          <div className="navbar-nav">
-            <Link to={"/"} className="text-light nav-link">
-              Home
+        <div
+          className="collapse navbar-collapse d-flex justify-content-between"
+          id="navbarNavAltMarkup"
+        >
+          <div></div>
+          <div className="navbar-nav fw-semibold fs-5 outline-nav center-nav d-flex align-items-center">
+            <Link to={"/games"} className="text-dark nav-link">
+              All Games
             </Link>
-            <Link to={"/about-us"} className="text-light nav-link">
-              About Us
+            <Link to={"/adv-search"} className="text-dark nav-link">
+              Find Yours
             </Link>
-            <Link to={"/work-us"} className="text-light nav-link">
-              Work with Us
-            </Link>
+            <i className="text-dark nav-link fa-solid fa-magnifying-glass cursor-pointer"></i>
+          </div>
+          <div className="navbar-nav fs-3">
+            <div className="me-3 cursor-pointer">
+              <i className="fa-solid fa-cart-shopping"></i>
+            </div>
+            <div className="cursor-pointer">
+              <i className="fa-regular fa-circle-user"></i>
+            </div>
           </div>
         </div>
       </div>
