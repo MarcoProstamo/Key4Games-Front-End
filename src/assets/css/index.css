@@ -68,7 +68,7 @@ body{
 
 .navbar.scrolled {
     background-color: rgba(255, 255, 255, 0.85) !important;
-    transition: background-color 0.3s ease-in-out;
+    transition: background-color 0.5s ease-in-out;
 }
   
 .navbar.scrolled .navbar-brand,
@@ -79,4 +79,8 @@ body{
 .navbar.scrolled .fa-cart-shopping,
 .navbar.scrolled .fa-circle-user {
     color: black !important;
+}
+
+.spacing-from-nav{
+    margin-top: calc(90px + 3rem);
 }

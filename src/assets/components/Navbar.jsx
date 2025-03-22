@@ -5,15 +5,9 @@ export default function Navbar() {
   useEffect(() => {
     const handleScroll = () => {
       const navbar = document.getElementById("navbar");
-      if (window.scrollY > 50) {
-        navbar.classList.add("scrolled");
-      } else {
-        navbar.classList.remove("scrolled");
-      }
+      navbar.classList.add("scrolled");
     };
-
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
+    handleScroll();
   }, []);
 
   return (
