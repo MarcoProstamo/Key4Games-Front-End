@@ -20,8 +20,9 @@ export default function HomePage() {
         <div className="row row-cols-3 g-5">
           {games &&
             games.map((game, i) => {
-              if (i < 9)
-                return <Game title={game.title} id={game.id} key={game.id} />;
+              console.log(game);
+
+              if (i < 9) return <Game game={game} key={game.id} />;
             })}
         </div>
       </section>
