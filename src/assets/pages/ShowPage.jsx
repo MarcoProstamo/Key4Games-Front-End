@@ -22,16 +22,25 @@ export default function ShowPage() {
   return (
     <>
       <div className="container spacing-from-nav mb-5 text-light">
-        {game && genre && (
-          <ul>
-            <li>{game.title}</li>
-            <li>{game.publisher}</li>
-            <li>{game.developer}</li>
-            <li>{genre.name}</li>
-            <li>{game.description}</li>
-            <li>Immagine</li>
-          </ul>
-        )}
+        <div className="row justify-content-center flex-nowrap">
+          {game && genre && <Game game={game} />}
+          {game && genre && (
+            <div className="w-25 d-flex flex-column justify-content-between">
+              <p>{game.description}</p>
+              <div>
+                <span className="badge text-bg-light mb-2">{genre.name}</span>
+                <div>
+                  <span className="badge text-bg-secondary me-2">
+                    {game.publisher}
+                  </span>
+                  <span className="badge text-bg-secondary">
+                    {game.developer}
+                  </span>
+                </div>
+              </div>
+            </div>
+          )}
+        </div>
       </div>
     </>
   );
