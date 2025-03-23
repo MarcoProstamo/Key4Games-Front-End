@@ -39,7 +39,6 @@ export default function Navbar() {
             <Link to={"/adv-search"} className="text-dark nav-link">
               Find Yours
             </Link>
-            <i className="text-dark nav-link fa-solid fa-magnifying-glass cursor-pointer"></i>
           </div>
           <div className="navbar-nav fs-3">
             <div className="me-3 cursor-pointer">
