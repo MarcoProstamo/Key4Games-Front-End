@@ -17,12 +17,10 @@ export default function HomePage() {
           </a>
           <i className="fa-solid fa-chevron-right fs-4 text-secondary"></i>
         </div>
-        <div className="row row-cols-3 g-5">
+        <div className="row row-cols-3 g-4 mb-5">
           {games &&
             games.map((game, i) => {
-              console.log(game);
-
-              if (i < 9) return <Game game={game} key={game.id} />;
+              if (i > 0 && i < 10) return <Game game={game} key={game.id} />;
             })}
         </div>
       </section>
